@@ -115,9 +115,10 @@
       }
     }
   },
-  "defaultProject": "medical-recording-system",
   "cli": {
     "analytics": "83eaf683-78a9-446c-b121-ba730cb7e592",
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

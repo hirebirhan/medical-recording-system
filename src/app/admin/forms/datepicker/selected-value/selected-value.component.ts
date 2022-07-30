@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {UntypedFormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-selected-value',
@@ -7,7 +7,7 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./selected-value.component.scss']
 })
 export class SelectedValueComponent {
-  date = new FormControl(new Date());
-  serializedDate = new FormControl((new Date()).toISOString());
+  date = new UntypedFormControl(new Date());
+  serializedDate = new UntypedFormControl((new Date()).toISOString());
   constructor() { }
 }
