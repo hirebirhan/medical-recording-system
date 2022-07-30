@@ -32,7 +32,7 @@ export class DialogOverviewComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialogComponent, {
       width: '250px',
       data: { name: this.name, animal: this.animal }
     });
@@ -59,9 +59,9 @@ export class DialogOverviewComponent {
 </div>
   `
 })
-export class DialogOverviewExampleDialog {
+export class DialogOverviewExampleDialogComponent {
   constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) {}
 

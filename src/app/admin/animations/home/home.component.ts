@@ -49,7 +49,7 @@ import {
     ])
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   items = [];
   constructor() {}
 
@@ -65,5 +65,5 @@ export class HomeComponent implements OnInit {
     this.items.length ? this.hideItems() : this.showItems();
   }
 
-  ngOnInit() {}
+ 
 }

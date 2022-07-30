@@ -11,7 +11,7 @@ import { map, startWith } from 'rxjs/operators';
   templateUrl: './chips-auto-complete.component.html',
   styleUrls: ['./chips-auto-complete.component.scss']
 })
-export class ChipsAutoCompleteComponent implements OnInit {
+export class ChipsAutoCompleteComponent  {
   visible = true;
   selectable = true;
   removable = true;
@@ -34,7 +34,7 @@ export class ChipsAutoCompleteComponent implements OnInit {
     );
   }
 
-  ngOnInit() {}
+
 
   add(event: MatChipInputEvent): void {
     const input = event.input;

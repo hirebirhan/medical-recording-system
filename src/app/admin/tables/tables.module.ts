@@ -1,3 +1,4 @@
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
@@ -20,7 +21,8 @@ import { DataService } from './data.service';
     MatPaginatorModule,
     MatSortModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatToolbarModule
   ],
   declarations: [TablesComponent],
   providers: [DataService]

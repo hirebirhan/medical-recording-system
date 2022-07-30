@@ -44,7 +44,7 @@ import {
 import { BasicSnackBarComponent } from './dialogs/snack-bar/basic-snack-bar.component';
 import {
   DialogOverviewComponent,
-  DialogOverviewExampleDialog
+  DialogOverviewExampleDialogComponent
 } from './dialogs/dialog-overview/dialog-overview.component';
 import { StepperOverviewComponent } from './steppers/stepper-overview/stepper-overview.component';
 import { StepperVerticalComponent } from './steppers/stepper-vertical/stepper-vertical.component';
@@ -98,7 +98,7 @@ import { MatTabsModule } from '@angular/material/tabs';
         PizzaPartyComponent,
         BasicSnackBarComponent,
         DialogOverviewComponent,
-        DialogOverviewExampleDialog,
+        DialogOverviewExampleDialogComponent,
         StepperOverviewComponent,
         StepperVerticalComponent,
         BasicExpansionPanelComponent,

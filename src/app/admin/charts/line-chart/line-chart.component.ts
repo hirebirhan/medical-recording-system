@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.scss'],
 })
-export class LineChartComponent implements OnInit {
+export class LineChartComponent {
   lineChartData: Array<any> = [
     {
       data: [65, 59, 80, 81, 56, 55, 40],
@@ -56,7 +56,7 @@ export class LineChartComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+
   chartClicked(e: any): void {
     console.log(e.active);
     console.log(e.event);

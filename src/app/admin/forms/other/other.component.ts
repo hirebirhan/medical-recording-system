@@ -11,7 +11,7 @@ import {
   templateUrl: './other.component.html',
   styleUrls: ['./other.component.scss']
 })
-export class OtherComponent implements OnInit {
+export class OtherComponent  {
   options: FormGroup;
   email = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
@@ -23,7 +23,6 @@ export class OtherComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
 
   getErrorMessage() {
     return this.email.hasError('required')

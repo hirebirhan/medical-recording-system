@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pie-chart.component.html',
   styleUrls: ['./pie-chart.component.scss'],
 })
-export class PieChartComponent implements OnInit {
+export class PieChartComponent  {
   pieChartData = {
     labels: ['Download Sales', 'In-Store Sales', 'Mail Sales'],
     datasets: [
@@ -23,7 +23,6 @@ export class PieChartComponent implements OnInit {
   pieChartType = 'pie';
   constructor() {}
 
-  ngOnInit() {}
   chartClicked(e: any): void {
     console.log(e.active);
     console.log(e.event);

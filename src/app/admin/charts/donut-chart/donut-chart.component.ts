@@ -23,7 +23,9 @@ export class DonutChartComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.doughnutChartType = 'doughnut';
+  }
   chartClicked(e: any): void {
     console.log(e.active);
     console.log(e.event);

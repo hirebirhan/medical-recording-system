@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { UserData, DataService } from '../data.service';
 import { SelectionModel } from '@angular/cdk/collections';
+import {LiveAnnouncer} from '@angular/cdk/a11y';
+
 
 @Component({
   selector: 'app-tables',
@@ -15,9 +17,11 @@ export class TablesComponent implements OnInit, AfterViewInit {
   dataSource: MatTableDataSource<UserData>;
   selection: SelectionModel<UserData>;
 
+
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
-  constructor(private readonly dataService: DataService) {}
+  constructor(private readonly dataService: DataService,
+    private _liveAnnouncer: LiveAnnouncer) {}
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource(this.dataService.create100Users());
@@ -48,5 +52,17 @@ export class TablesComponent implements OnInit, AfterViewInit {
     this.isAllSelected()
       ? this.selection.clear()
       : this.dataSource.data.forEach(row => this.selection.select(row));
+  }
+   /** Announce the change in sort state for assistive technology. */
+   announceSortChange(sortState: Sort) {
+    // This example uses English messages. If your application supports
+    // multiple language, you would internationalize these strings.
+    // Furthermore, you can customize the message to add additional
+    // details about the values being sorted.
+    if (sortState.direction) {
+      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+    } else {
+      this._liveAnnouncer.announce('Sorting cleared');
+    }
   }
 }

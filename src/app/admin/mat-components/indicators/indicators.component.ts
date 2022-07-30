@@ -11,7 +11,7 @@ interface Fruit {
   templateUrl: './indicators.component.html',
   styleUrls: ['./indicators.component.scss']
 })
-export class IndicatorsComponent implements OnInit {
+export class IndicatorsComponent {
   visible = true;
   selectable = true;
   removable = true;
@@ -19,8 +19,7 @@ export class IndicatorsComponent implements OnInit {
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   fruits: Fruit[] = [{ name: 'Lemon' }, { name: 'Lime' }, { name: 'Apple' }];
   constructor() {}
-
-  ngOnInit() {}
+  
   add(event: MatChipInputEvent): void {
     const input = event.input;
     const value = event.value;

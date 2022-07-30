@@ -27,7 +27,7 @@ class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './inputs.component.html',
   styleUrls: ['./inputs.component.scss']
 })
-export class InputsComponent implements OnInit {
+export class InputsComponent  {
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email
@@ -36,5 +36,4 @@ export class InputsComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
   constructor() {}
 
-  ngOnInit() {}
 }

@@ -5,12 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent  {
 
   constructor() { }
 
-  ngOnInit() {
-  }
   formatLabel(value: number | null) {
     if (!value) {
       return 0;

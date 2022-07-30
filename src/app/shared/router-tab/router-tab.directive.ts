@@ -3,8 +3,9 @@ import { MatTab } from '@angular/material/tabs';
 import { RouterLink } from '@angular/router';
 
 @Directive({
+  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: 'mat-tab[routerLink]'
 })
-export class RouterTab {
+export class RouterTabDirective {
   constructor(public tab: MatTab, public link: RouterLink) {}
 }

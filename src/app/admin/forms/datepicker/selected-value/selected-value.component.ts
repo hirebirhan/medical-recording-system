@@ -6,12 +6,8 @@ import {FormControl} from '@angular/forms';
   templateUrl: './selected-value.component.html',
   styleUrls: ['./selected-value.component.scss']
 })
-export class SelectedValueComponent implements OnInit {
+export class SelectedValueComponent {
   date = new FormControl(new Date());
   serializedDate = new FormControl((new Date()).toISOString());
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }

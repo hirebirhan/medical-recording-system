@@ -8,15 +8,16 @@ import {
 import { MatTabGroup } from '@angular/material/tabs';
 import { Subscription } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
-import { RouterTab } from './router-tab.directive';
+import { RouterTabDirective } from './router-tab.directive';
 
 @Directive({
+  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: '[routerTabs]'
 })
-export class RouterTabs implements AfterContentInit, OnDestroy {
+export class RouterTabsDirective implements AfterContentInit, OnDestroy {
   subscription = new Subscription();
 
-  @ContentChildren(RouterTab) routerTabs: QueryList<RouterTab>;
+  @ContentChildren(RouterTabDirective) routerTabs: QueryList<RouterTabDirective>;
 
   constructor(private host: MatTabGroup, private router: Router) {}
 

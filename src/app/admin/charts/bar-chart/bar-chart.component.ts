@@ -21,7 +21,9 @@ export class BarChartComponent implements OnInit {
   ];
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("This is chart");
+  }
 
   chartClicked(e: any): void {
     console.log(e.active);

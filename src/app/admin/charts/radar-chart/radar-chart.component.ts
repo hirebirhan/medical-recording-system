@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './radar-chart.component.html',
   styleUrls: ['./radar-chart.component.scss']
 })
-export class RadarChartComponent implements OnInit {
+export class RadarChartComponent  {
   radarChartLabels: string[] = [
     'Eating',
     'Drinking',
@@ -21,7 +21,7 @@ export class RadarChartComponent implements OnInit {
   ];
   constructor() {}
 
-  ngOnInit() {}
+ 
   chartClicked(e: any): void {
     console.log(e.active);
     console.log(e.event);

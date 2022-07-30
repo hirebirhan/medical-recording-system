@@ -7,9 +7,11 @@ import { childRoutes } from '../../child-routes';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
-  showMenu = false;
+  showMenu:boolean;
   routes = childRoutes;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.showMenu=false;
+  }
 }

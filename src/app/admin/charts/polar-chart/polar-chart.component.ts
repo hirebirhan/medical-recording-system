@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './polar-chart.component.html',
   styleUrls: ['./polar-chart.component.scss'],
 })
-export class PolarChartComponent implements OnInit {
+export class PolarChartComponent  {
   polarAreaChartData = {
     labels: [
       'Download Sales',
@@ -30,7 +30,6 @@ export class PolarChartComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
   chartClicked(e: any): void {
     console.log(e.active);
     console.log(e.event);

@@ -5,11 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dialogs.component.html',
   styleUrls: ['./dialogs.component.scss']
 })
-export class DialogsComponent implements OnInit {
+export class DialogsComponent  {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+ 
 }

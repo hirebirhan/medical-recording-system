@@ -5,11 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './basic-expansion-panel.component.html',
   styleUrls: ['./basic-expansion-panel.component.scss']
 })
-export class BasicExpansionPanelComponent implements OnInit {
+export class BasicExpansionPanelComponent  {
   panelOpenState = false;
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }

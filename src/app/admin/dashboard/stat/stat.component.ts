@@ -1,17 +1,19 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-stat',
   templateUrl: './stat.component.html',
   styleUrls: ['./stat.component.scss']
 })
-export class StatComponent implements OnInit {
+export class StatComponent implements OnChanges {
   @Input() bgClass: string;
   @Input() icon: string;
   @Input() count: number;
   @Input() label: string;
   @Input() data: number;
   constructor() {}
-
-  ngOnInit() {}
+  
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes) console.log(changes)
+  }
 }

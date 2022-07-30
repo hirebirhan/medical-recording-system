@@ -36,7 +36,7 @@ class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss']
 })
-export class CheckboxComponent implements OnInit {
+export class CheckboxComponent {
   selected = '';
   selectedValue: string;
 
@@ -104,6 +104,4 @@ export class CheckboxComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
   constructor() {}
-
-  ngOnInit() {}
 }

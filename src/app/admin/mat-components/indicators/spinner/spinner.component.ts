@@ -5,13 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.scss']
 })
-export class SpinnerComponent implements OnInit {
+export class SpinnerComponent  {
   color = 'primary';
   mode = 'determinate';
   value = 50;
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
