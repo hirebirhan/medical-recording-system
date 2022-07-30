@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule as FormModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -26,6 +25,7 @@ import { InputsComponent } from './inputs/inputs.component';
 import { OtherComponent } from './other/other.component';
 import { StatesGroupComponent } from './auto-complete/states-group/states-group.component';
 import { SelectedValueComponent } from './datepicker/selected-value/selected-value.component';
+import { SharedModule } from 'app/shared/shared.module';
 
 @NgModule({
   imports: [

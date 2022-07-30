@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from 'src/app/shared/shared.module';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -51,6 +50,7 @@ import { StepperVerticalComponent } from './steppers/stepper-vertical/stepper-ve
 import { BasicExpansionPanelComponent } from './panels/basic-expansion-panel/basic-expansion-panel.component';
 import { ExpansionPanelAccordionComponent } from './panels/expansion-panel-accordion/expansion-panel-accordion.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { SharedModule } from 'app/shared/shared.module';
 
 @NgModule({
     imports: [

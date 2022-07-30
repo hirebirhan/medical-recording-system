@@ -12,6 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
+    pathMatch:"prefix",
     loadChildren: () =>
       import('./login/login.module').then((m) => m.LoginModule),
   },

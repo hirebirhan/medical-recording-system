@@ -5,13 +5,16 @@ import { childRoutes } from './child-routes';
 
 
 const routes: Routes = [
+  
   {
-    path: '',
+    path: 'admin',
     component: LayoutComponent,
     children: [
       {
         path: '',
-        redirectTo: 'dashboard'
+        redirectTo: 'dashboard',
+        pathMatch:'full'
+      
       },
       ...childRoutes
     ]
@@ -22,4 +25,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AdminRoutingModule {}
+export class AdminRoutingModule { }
