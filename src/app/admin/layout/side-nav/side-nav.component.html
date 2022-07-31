@@ -1,14 +1,7 @@
 <mat-nav-list>
-  <a
-    *ngFor="let item of routes"
-    mat-list-item
-    [routerLinkActive]="'active'"
-    [routerLink]="['/admin/', item.path]"
-  >
-    <mat-icon class="sidenav-icon">{{ item.data.icon }}</mat-icon>
-    {{ item.data.text }}
+  <a *ngFor="let item of routes" mat-list-item [routerLinkActive]="'active'" [routerLink]="['/admin/', item.path]">
+    <mat-icon class="sidenav-icon">{{ item.data.icon }}</mat-icon> {{ item.data.text }}
   </a>
- 
   <div class="nested-menu">
     <a mat-list-item (click)="showMenu = !showMenu">
       <mat-icon class="sidenav-icon">add</mat-icon>Menu

@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./admin/admin.module').then((m) => m.AdminModule),
+      import('./login/login.module').then((m) => m.LoginModule),
     canActivate: [AuthGuard],
   },
   {
@@ -16,10 +16,17 @@ const routes: Routes = [
     loadChildren: () =>
       import('./login/login.module').then((m) => m.LoginModule),
   },
+
   {
-    path: '**',
-    component: PageNotFoundComponent,
+    path: 'admin',
+    pathMatch:"prefix",
+    loadChildren: () =>
+    import('./admin/admin.module').then((m) => m.AdminModule),
   },
+  // {
+  //   path: '**',
+  //   component: PageNotFoundComponent,
+  // },
 ];
 
 @NgModule({

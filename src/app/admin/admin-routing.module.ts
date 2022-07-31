@@ -7,14 +7,13 @@ import { childRoutes } from './child-routes';
 const routes: Routes = [
   
   {
-    path: 'admin',
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: '',
-        redirectTo: 'dashboard',
+        path:'',
+        redirectTo: '/dashboard',
         pathMatch:'full'
-      
       },
       ...childRoutes
     ]
