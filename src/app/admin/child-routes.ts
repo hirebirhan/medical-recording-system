@@ -1,3 +1,4 @@
+import { UsersModule } from './users/users.module';
 export const childRoutes = [
   {
     path: 'dashboard',
@@ -23,6 +24,12 @@ export const childRoutes = [
     loadChildren: () =>
       import('./tables/tables.module').then(m => m.TablesModule),
     data: { icon: 'calendar_month', text: 'Appointment' }
+  }, 
+  {
+    path: 'users',
+    loadChildren: () =>
+      import('./users/users.module').then(m => m.UsersModule),
+    data: { icon: 'person', text: 'users' }
   }, 
   {
     path: 'labratory',

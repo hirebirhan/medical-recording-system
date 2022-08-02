@@ -11,6 +11,7 @@ import { catchError, map } from 'rxjs/operators';
 export class LoginService {
   private readonly urlSuffix = "users"
 
+
   constructor(private http: HttpClient) { }
 
   get loginUrl() {
@@ -18,16 +19,7 @@ export class LoginService {
   }
 
   login(user: any) {
-    return this.http.post(this.loginUrl, user,{
-      headers:
-        new HttpHeaders(
-          {
-            'Content-Type': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest',
-            "Access-Control-Allow-Origin": "*"
-          }
-        )
-    }).pipe(map(res => res), catchError(err => throwError(err)) );
+    return this.http.post(this.loginUrl, user).pipe(map(res => res), catchError(err => throwError(err)) );
   }
   }
 

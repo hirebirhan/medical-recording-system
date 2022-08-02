@@ -3,6 +3,7 @@
     <form class="login-form" [formGroup]="loginForm"  (ngSubmit)="onLogin()">
       <div class="text-center">
         <h2 class="app-name">MR Admin</h2>
+        <mat-error *ngIf="showError">User name or password is incorrect</mat-error>
       </div>
       <div fxLayout="row">
         <div fxFlexFill>
