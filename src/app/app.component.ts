@@ -6,3 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {}
+/// https://gist.github.com/UmerIftikhar/17b52dfe598f2e05e94d7bacca434f22

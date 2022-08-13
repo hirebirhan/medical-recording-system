@@ -1,4 +1,3 @@
-import { IUser } from './../../core/User/IUser';
 import { UsersService } from './../../core/users.service';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { IUserDetails } from 'app/core/User/IUser';
@@ -15,7 +14,7 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 })
 export class UsersComponent implements OnInit,AfterViewInit {
   users: IUserDetails[]=[];
-  displayedColumns = ['select', 'id', 'name', 'progress', 'color'];
+  displayedColumns = ['select', 'id', 'Fullname', 'progress', 'color'];
   dataSource: MatTableDataSource<IUserDetails>;
   selection: SelectionModel<IUserDetails>;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;

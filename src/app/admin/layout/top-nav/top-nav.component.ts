@@ -18,6 +18,9 @@ export class TopNavComponent  {
 
   onLoggedout() {
     localStorage.removeItem('isLoggedin');
+    localStorage.removeItem('token');
+    localStorage.removeItem('username');
+    localStorage.removeItem('expires');
     this.router.navigate(['/login']);
   }
 }
