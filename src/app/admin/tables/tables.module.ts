@@ -7,9 +7,14 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+
+
 
 import { TablesRoutingModule } from './tables-routing.module';
-import { TablesComponent } from './tables/tables.component';
+import { BaseTableComponent } from './tables/baseTable.component';
 import { DataService } from './data.service';
 
 @NgModule({
@@ -22,9 +27,13 @@ import { DataService } from './data.service';
     MatSortModule,
     MatInputModule,
     MatCheckboxModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule,
+    MatIconModule,
+    MatButtonModule
   ],
-  declarations: [TablesComponent],
+  declarations: [BaseTableComponent],
+  exports:[BaseTableComponent],
   providers: [DataService]
 })
 export class TablesModule {}

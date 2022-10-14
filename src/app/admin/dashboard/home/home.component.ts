@@ -15,7 +15,18 @@ interface Place {
 })
 export class HomeComponent implements OnInit {
   places: Array<Place> = [];
-  constructor() {}
+  columnDefinition={id:'id',name:'full name',age:"age"}
+  addRowTxt="Add item"
+  data= [
+    {id:1,name:'Birhan', age:33},
+    {id:2,name:'Cheru', age:14},
+    {id:3,name:'Neg', age:34}
+
+
+]
+  
+  constructor() { }
+
   ngOnInit() {
     this.places = [
       {

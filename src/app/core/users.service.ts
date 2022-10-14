@@ -1,9 +1,9 @@
-import { IUser, IUserDetails } from './User/IUser';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'environments/environment';
-import { throwError, Observable } from 'rxjs';
+import { throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { IUser, IUserDetails } from './User/IUser';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +30,11 @@ export class UsersService {
       {FirstName:"Abdulmenan",LastName: "Birhan",MiddleName:"Nega",Roles:[]},
       {FirstName:"Amira",LastName: "Birhan",MiddleName:"Nega",Roles:[]}
     ];
+    
+    this.http.get("https://localhost:7026/api/users/users").subscribe(response=>{
+      console.log(response)
+      
+    })
     return users
   }
 }

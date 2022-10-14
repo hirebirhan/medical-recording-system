@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-stat',
@@ -13,7 +13,7 @@ export class StatComponent implements OnChanges {
   @Input() data: number;
   constructor() {}
   
-  ngOnChanges(changes: SimpleChanges): void {
-    if(changes) console.log(changes)
+  ngOnChanges() {
+    console.log("log")
   }
 }

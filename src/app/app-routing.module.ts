@@ -23,10 +23,12 @@ const routes: Routes = [
     loadChildren: () =>
     import('./admin/admin.module').then((m) => m.AdminModule),
   },
-  // {
-  //   path: '**',
-  //   component: PageNotFoundComponent,
-  // },
+  {
+    path: '**',
+    pathMatch:"prefix",
+    loadChildren: () =>
+    import('./admin/admin.module').then((m) => m.AdminModule),
+  },
 ];
 
 @NgModule({
