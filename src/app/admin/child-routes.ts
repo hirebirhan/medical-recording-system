@@ -70,6 +70,14 @@ export const childRoutes = [
       ),
     data: { icon: 'code', text: 'Material Components' }
   },
+  {
+    path: 'mat-components',
+    loadChildren: () =>
+      import('./mat-components/mat-components.module').then(
+        m => m.MatComponentsModule
+      ),
+    data: { icon: 'payments', text: 'Finance' }
+  },
   // {
   //   path: 'google-maps',
   //   loadChildren: () =>

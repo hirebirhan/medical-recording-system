@@ -1,32 +1,7 @@
-<mat-nav-list>
-  <a *ngFor="let item of routes" mat-list-item [routerLinkActive]="'active'" [routerLink]="['/admin/', item.path]">
-    <mat-icon class="sidenav-icon">{{ item.data.icon }}</mat-icon> {{ item.data.text }}
+<mat-nav-list> 
+  <a  
+  *ngFor="let item of routes" mat-list-item [routerLinkActive]="'active'" [routerLink]="['/admin/', item.path]">
+   <span> <mat-icon class="sidenav-icon">{{ item.data.icon }}</mat-icon> </span>
+   <span style="margin-left: 8px;">{{ item.data?.text }}</span>
   </a>
-  <div class="nested-menu">
-    <a mat-list-item (click)="showMenu = !showMenu">
-      <mat-icon class="sidenav-icon">settings</mat-icon>settings
-    </a>
-    <ul class="nested submenu" [class.expand]="showMenu">
-      <li>
-        <a href="javascript:void(0)">
-          <span>Organization setup</span>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">
-          <span>Department</span>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">
-          <span>users</span>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">
-          <span>Roles</span>
-        </a>
-      </li>
-    </ul>
-  </div>
 </mat-nav-list>

@@ -44,6 +44,7 @@ export class LoginComponent  {
       });
 
       }
+      this.router.navigate(['admin/dashboard']);
     },err=>{
       this.showError=true;
       console.log("error",err)
