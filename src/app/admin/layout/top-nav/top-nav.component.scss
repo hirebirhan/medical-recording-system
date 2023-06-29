@@ -9,10 +9,10 @@
   z-index: 1000;
 }
 
-mat-toolbar {
-  background-color: #fff;
-  box-shadow: 3px 0 10px #b7c0ce33;
-  min-height: 60px;
+.mat-toolbar {
+  background-color: #ffffff;
+  padding: 10px 20px 15px;
+  box-shadow: 0px 20px 40px rgba(18, 34, 64, 0.1);
 }
 
 .nav-brand {
