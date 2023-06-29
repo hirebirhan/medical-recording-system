@@ -6,13 +6,6 @@ export const childRoutes = [
       import('./dashboard/dashboard.module').then(m => m.DashboardModule),
     data: { icon: 'dashboard', text: 'Dashboard' }
   },
-
-  // {
-  //   path: 'charts',
-  //   loadChildren: () =>
-  //     import('./charts/charts.module').then(m => m.ChartsModule),
-  //   data: { icon: 'bar_chart', text: 'Charts' }
-  // },
   {
     path: 'patients',
     loadChildren: () =>
@@ -25,18 +18,18 @@ export const childRoutes = [
       import('./tables/tables.module').then(m => m.TablesModule),
     data: { icon: 'calendar_month', text: 'Appointment' }
   }, 
-  {
-    path: 'users',
-    loadChildren: () =>
-      import('./users/users.module').then(m => m.UsersModule),
-    data: { icon: 'person', text: 'users' }
-  }, 
-  {
-    path: 'labratory',
-    loadChildren: () =>
-      import('./tables/tables.module').then(m => m.TablesModule),
-    data: { icon: 'local_hospital', text: 'Labratory' }
-  },
+  // {
+  //   path: 'users',
+  //   loadChildren: () =>
+  //     import('./users/users.module').then(m => m.UsersModule),
+  //   data: { icon: 'person', text: 'users' }
+  // }, 
+  // {
+  //   path: 'labratory',
+  //   loadChildren: () =>
+  //     import('./tables/tables.module').then(m => m.TablesModule),
+  //   data: { icon: 'local_hospital', text: 'Labratory' }
+  // },
   {
     path: 'labratory',
     loadChildren: () =>
@@ -55,35 +48,5 @@ export const childRoutes = [
     loadChildren: () =>
       import('./tables/tables.module').then(m => m.TablesModule),
     data: { icon: 'person', text: 'Doctors' }
-  },
-  {
-    path: 'mat-grid',
-    loadChildren: () =>
-      import('./mat-grid/mat-grid.module').then(m => m.MatGridModule),
-    data: { icon: 'grid_on', text: 'Flex Grid' }
-  },
-  {
-    path: 'mat-components',
-    loadChildren: () =>
-      import('./mat-components/mat-components.module').then(
-        m => m.MatComponentsModule
-      ),
-    data: { icon: 'code', text: 'Material Components' }
-  },
-  {
-    path: 'mat-components',
-    loadChildren: () =>
-      import('./mat-components/mat-components.module').then(
-        m => m.MatComponentsModule
-      ),
-    data: { icon: 'payments', text: 'Finance' }
-  },
-  // {
-  //   path: 'google-maps',
-  //   loadChildren: () =>
-  //     import('./google-map-demo/google-map-demo.module').then(
-  //       m => m.GoogleMapDemoModule
-  //     ),
-  //   data: { icon: 'place', text: 'Google Maps' }
-  // }
+  }
 ];

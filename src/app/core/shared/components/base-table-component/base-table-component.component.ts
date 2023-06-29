@@ -1,7 +1,7 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
-import { TableConstants, UserActions } from 'app/core/constants/constants';
+import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {PageEvent} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
+import {TableConstants, UserActions} from 'app/core/constants/constants';
 
 @Component({
   selector: 'app-base-table-component',

@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-top-nav',

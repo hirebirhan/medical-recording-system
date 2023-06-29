@@ -1,4 +1,4 @@
-import { PageEvent } from "@angular/material/paginator";
+import {PageEvent} from "@angular/material/paginator";
 
 export class Constants {
     public static apiRoot = '/api'; // If there is some prefix for all the APIs, then define that in constants.

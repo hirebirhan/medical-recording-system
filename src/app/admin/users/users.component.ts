@@ -1,11 +1,11 @@
-import { UsersService } from './../../core/users.service';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { IUserDetails } from 'app/core/User/IUser';
-import { MatTableDataSource } from '@angular/material/table';
-import { SelectionModel } from '@angular/cdk/collections';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort, Sort } from '@angular/material/sort';
-import { LiveAnnouncer } from '@angular/cdk/a11y';
+import {UsersService} from './../../core/users.service';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {IUserDetails} from 'app/core/User/IUser';
+import {MatTableDataSource} from '@angular/material/table';
+import {SelectionModel} from '@angular/cdk/collections';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort, Sort} from '@angular/material/sort';
+import {LiveAnnouncer} from '@angular/cdk/a11y';
 
 @Component({
   selector: 'app-users',

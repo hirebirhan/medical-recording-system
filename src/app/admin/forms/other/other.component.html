@@ -88,7 +88,7 @@
     <mat-card-content class="mfk">
       <mat-form-field appearance="outline" floatLabel="always" style="width: 50px;">
         <mat-label>Fund</mat-label>
-        <input matInput type="number" maxlength="3" placeholder="000" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+        <input matInput type="number" maxlength="3" placeholder="000" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
       </mat-form-field>
       <mat-form-field appearance="outline" floatLabel="always" style="width: 40px;">
         <mat-label>Org</mat-label>

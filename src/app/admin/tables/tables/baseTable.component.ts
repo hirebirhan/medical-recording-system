@@ -1,8 +1,8 @@
-import { Constants, UserActions } from '../models/Constants';
-import { Component, Input, Output, EventEmitter, ViewChild, OnChanges } from '@angular/core';
-import { MatPaginator, PageEvent } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable, MatTableDataSource } from '@angular/material/table';
+import {Constants, UserActions} from '../models/Constants';
+import {Component, EventEmitter, Input, OnChanges, Output, ViewChild} from '@angular/core';
+import {MatPaginator, PageEvent} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatTable, MatTableDataSource} from '@angular/material/table';
 
 @Component({
     selector: 'app-base-table',

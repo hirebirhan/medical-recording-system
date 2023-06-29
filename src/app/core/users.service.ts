@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { environment } from 'environments/environment';
-import { throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
-import { IUser, IUserDetails } from './User/IUser';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {environment} from 'environments/environment';
+import {throwError} from 'rxjs';
+import {catchError, map} from 'rxjs/operators';
+import {IUser, IUserDetails} from './User/IUser';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {UntypedFormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import {Component} from '@angular/core';
+import {FormGroupDirective, NgForm, UntypedFormControl, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 
 interface Food {

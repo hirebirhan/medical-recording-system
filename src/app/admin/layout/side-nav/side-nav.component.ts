@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { childRoutes } from '../../child-routes';
+import {Component, OnInit} from '@angular/core';
+import {childRoutes} from '../../child-routes';
 
 @Component({
   selector: 'app-side-nav',

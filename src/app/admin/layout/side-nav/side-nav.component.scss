@@ -2,6 +2,11 @@
 
 .mat-nav-list {
     width: 100%;
+    display: block;
+    list-style-type: none;
+    height: auto;
+    margin: 0;
+
 }
 
 .nested-menu {
@@ -22,6 +27,7 @@
             margin: 0;
 
             li {
+                display: list-item;
                 a {
                     display: block;
                 }
