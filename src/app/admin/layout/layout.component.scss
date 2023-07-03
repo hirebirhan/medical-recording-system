@@ -12,7 +12,6 @@
   .sidenav-container {
     flex: 1;
     background: $main-background-color;
-
     .sidenav {
       padding: 8px;
       width: 18%;
@@ -22,10 +21,9 @@
     .main-container {
       background-color: #F0F3FB;
       display: block;
-      margin: 2px;
       min-height: calc(100vh - 76px);
       transition: .5s;
-      padding: 25px 0 0 25px;
+      padding: 15px 15px;
       box-sizing: border-box;
     }
   }

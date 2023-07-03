@@ -11,7 +11,7 @@
 </p>
 
 <div class="table-container">
-  <table mat-table [dataSource]="dataSource" matSort>
+  <table mat-table [dataSource]="dataSource" matSort class="">
     <caption></caption>
     <ng-container *ngFor="let columnId of objectKeys(columnDefinition)" [matColumnDef]="columnId">
 
