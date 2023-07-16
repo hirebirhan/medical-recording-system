@@ -15,6 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {TablesRoutingModule} from './tables-routing.module';
 import {BaseTableComponent} from './tables/baseTable.component';
 import {DataService} from './data.service';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import {DataService} from './data.service';
     MatToolbarModule,
     MatTooltipModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   declarations: [BaseTableComponent],
   exports:[BaseTableComponent],

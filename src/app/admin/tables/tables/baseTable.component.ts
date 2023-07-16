@@ -1,8 +1,8 @@
-import {Constants, UserActions} from '../models/Constants';
-import {Component, EventEmitter, Input, OnChanges, Output, ViewChild} from '@angular/core';
-import {MatPaginator, PageEvent} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTable, MatTableDataSource} from '@angular/material/table';
+import { Constants, UserActions } from '../models/Constants';
+import { Component, EventEmitter, Input, OnChanges, Output, ViewChild } from '@angular/core';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
 
 @Component({
     selector: 'app-base-table',
@@ -12,12 +12,16 @@ import {MatTable, MatTableDataSource} from '@angular/material/table';
 export class BaseTableComponent<T> implements OnChanges {
     // Its a key value pair, where key should be matching the columns in the table data, where as
     // the value should be the column display name.
-    @Input() columnDefinition: any = {}; 
+    @Input() columnDefinition: any = {};
     // This is an array of the table data which needs to be displayed.
-    @Input() tableData: any[];
+    @Input() tableData: any[] = [
+        { id: 1, name: 'Birhan', age: 33 },
+        { id: 2, name: 'Cheru', age: 14 },
+        { id: 3, name: 'Neg', age: 34 }
+    ];
     // pixles after which the table data must be over flowed.
     @Input() tableOverFlowLimit: any;
- 
+
     dataSource: MatTableDataSource<any>; // its any since, the data type is defined at runtime by the parent component.
     pageSize = Constants.pageSettings().pageSize; // default page size for the Table.
     pageSizeOptions: number[] = Constants.pageSizeOptions; // This tells how many items can be displayed per page.
@@ -74,8 +78,8 @@ export class BaseTableComponent<T> implements OnChanges {
 
     applySearchFilter(filterValue: string) {
         const valueToSearch = filterValue.trim().toLowerCase();
-        if(this.enableBackendSearch) {
-            this.searchCalled.emit(valueToSearch);      
+        if (this.enableBackendSearch) {
+            this.searchCalled.emit(valueToSearch);
         }
         if (this.enableBackendPagination) {
             this.paginator.firstPage();

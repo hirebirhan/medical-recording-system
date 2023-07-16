@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {childRoutes} from '../../child-routes';
+import { Component, OnInit } from '@angular/core';
+import { childRoutes } from '../../child-routes';
 
 @Component({
   selector: 'app-side-nav',
@@ -7,11 +7,11 @@ import {childRoutes} from '../../child-routes';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
-  showMenu:boolean;
+  showMenu: boolean;
   routes = childRoutes;
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
-    this.showMenu=false;
+    this.showMenu = false;
   }
 }

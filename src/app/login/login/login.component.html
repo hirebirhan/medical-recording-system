@@ -1,5 +1,5 @@
 <div class="login-page">
-  <div class="content px20">
+  <div class="content px-20">
     <form class="login-form" [formGroup]="loginForm"  (ngSubmit)="onLogin()">
       <div class="text-center">
         <h2 class="app-name">MR Admin</h2>
@@ -15,7 +15,7 @@
           </mat-form-field>
         </div>
       </div>
-      <div fxLayout="row" fxLayoutAlign="space-between" fxLayout.xs="column" class="mt20 mb20">
+      <div fxLayout="row" fxLayoutAlign="space-between" fxLayout.xs="column" class="mt20 mb-10">
         <mat-checkbox color="primary" [ngStyle.xs]="{'margin-bottom.px': 10}">Remember Me</mat-checkbox>
         <a href="javascript:void(0)">Forgot Password</a>
       </div>
